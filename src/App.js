@@ -61,8 +61,8 @@ function App() {
 
         <SectionContainer>
           <ButtonsContainer>
-            <Button color1={'108fe8'} color2={'0d72b8'} />
-            <Button color1={'e53030'} color2={'c91919'} />
+            <Button color={'108fe8'} color2={'0d72b8'} hoverColor={'003EFF'}/>
+            <Button color={'e53030'} color2={'c91919'} hoverColor={'f7362d'}/>
           </ButtonsContainer>
           <LogContainer>
             <Log logs={logArr}/>
