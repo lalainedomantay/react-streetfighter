@@ -30,11 +30,8 @@ const LogContainer = styled.div`
   float: right;
 `;
 
-const Score = styled.span`
-  margin-left: 2px;
-`;
 
-function App() {
+export default function App() {
   let logArr = [];
 
   logArr.push('Player used regular attack and did 10 damage.');
@@ -49,13 +46,11 @@ function App() {
           <PlayerContainer float={'left'}>
             <h3>Player</h3>
             <HealthMeter health={100}/>
-            <Score>100</Score>
           </PlayerContainer>
 
           <PlayerContainer float={'right'}>
             <h3>Opponent</h3>
             <HealthMeter health={25}/>
-            <Score>25</Score>
           </PlayerContainer>
         </SectionContainer>
 
@@ -72,5 +67,3 @@ function App() {
     </>
   );
 }
-
-export default App;

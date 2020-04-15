@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const HealthContainer = styled.div`
     background: #eee;
@@ -20,12 +21,19 @@ const HealthBar = styled.div`
             1px 1px 3px 0 rgba(0,0,0,0.33);
 `;
 
-const healthMeter = ({health}) => {
+const Score = styled.span`
+  margin-left: 2px;
+`;
+
+export default function HealthMeter ({health}) {
     return (
-        <HealthContainer>
-            <HealthBar amount = {health}></HealthBar>
-        </HealthContainer>
+        <>
+            <HealthContainer>
+                <HealthBar amount = {health}></HealthBar>
+            </HealthContainer>
+            <Score>{health}</Score>
+        </>
     );
 }
 
-export default healthMeter;
+HealthMeter.propTypes = {health: PropTypes.number};

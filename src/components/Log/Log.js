@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
     text-align: left;
@@ -12,7 +13,7 @@ const Container = styled.div`
     background-color: #f5f5f5;
 `;
 
-const log = ({logs}) => {
+export default function Log ({logs}) {
     return (
         <Container>
             <h3>Log</h3>
@@ -25,4 +26,4 @@ const log = ({logs}) => {
     )
 }
 
-export default log;
+Log.propTypes = {logs: PropTypes.array};
