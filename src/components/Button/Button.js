@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 
-const RoundButton = styled.div`
+const RoundButton = styled.button`
     background: #${props => props.color};
     border: 3px solid #fff;
     border-radius: 100%;
@@ -15,9 +15,9 @@ const RoundButton = styled.div`
     }
 `;
 
-const button = ({color,color2,hoverColor}) => {
+const button = ({color,color2,hoverColor,onClick}) => {
     return (
-        <RoundButton color={color} color2={color2} hoverColor={hoverColor} />
+        <RoundButton color={color} color2={color2} hoverColor={hoverColor} onClick={onClick} />
     )
 }
 

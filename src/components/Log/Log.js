@@ -19,7 +19,7 @@ export default function Log ({logs}) {
             <h3>Log</h3>
             <ul>
                 {logs.map((logText, index) =>{
-                    return <li>{logText}</li>;
+                    return <li key={index}>{logText}</li>;
                 })}
             </ul>
         </Container>
